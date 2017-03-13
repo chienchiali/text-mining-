@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*- 
 sentences = []
 position = 0
 for line in open('building_global_community.txt'):
