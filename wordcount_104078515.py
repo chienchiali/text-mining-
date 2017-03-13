@@ -16,12 +16,12 @@ sentence = sentence.replace('-\n','')
 sentence = sentence.replace('-',' ')
 # print (sentence)
 # build stopwords
+import nltk
 from nltk import word_tokenize
 print(word_tokenize(sentence))
 from nltk import wordpunct_tokenize
 print(wordpunct_tokenize(sentence))
-pip3 install nltk
-import nltk
+
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 stops = set(stopwords.words('english'))
