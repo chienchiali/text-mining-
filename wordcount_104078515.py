@@ -1,19 +1,19 @@
-# -*- coding: UTF-8 -*- 
+# -*- coding: UTF-8 -*-
 sentences = []
 position = 0
 for line in open('building_global_community.txt'):
     # 刪減前後的空白(與換行)
     line = line.strip('')
-    #print (line)
-    
-    # 將處理好的字串加入 sentences 
+    # print (line)
+
+    # 將處理好的字串加入 sentences
     sentences.append(line)
 
-    #split sentences into words (split)
+    # split sentences into words (split)
     sentence = ''.join(sentences)
-    
-sentence = sentence.replace('-\n','')
-sentence = sentence.replace('-',' ')
+
+sentence = sentence.replace('-\n', '')
+sentence = sentence.replace('-', ' ')
 # print (sentence)
 # build stopwords
 import nltk
@@ -27,8 +27,8 @@ from nltk.corpus import stopwords
 stops = set(stopwords.words('english'))
 import string
 # add more
-stops.update(string.ascii_letters + string.punctuation + string.digits)  
-#如果我們
+stops.update(string.ascii_letters + string.punctuation + string.digits)
+# 如果我們
 stops.update(('--'))
 import string
 string.punctuation
